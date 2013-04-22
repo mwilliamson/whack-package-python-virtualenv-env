@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+set -e
+
+INSTALL_DIR=$1
+
+virtualenv "$INSTALL_DIR/env"
+ln -s "env/bin" "$INSTALL_DIR/.bin"
+mkdir "$INSTALL_DIR/bin" -p
+
+echo '#!/usr/bin/env sh
+
+set -e
+
+SCRIPT_PATH=`readlink -f $0`
+SCRIPT_DIR=`dirname $SCRIPT_PATH`
+INSTALL_DIR=`dirname $SCRIPT_DIR`
+
+"$INSTALL_DIR/run" "$INSTALL_DIR/env/bin/python" "$@"
+
+' > "$INSTALL_DIR/bin/python"
+
+chmod +x "$INSTALL_DIR/bin/python"
