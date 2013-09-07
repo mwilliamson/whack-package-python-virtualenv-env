@@ -15,10 +15,10 @@ $ whack install \
     git+https://github.com/mwilliamson/whack-package-python-virtualenv-env.git \
     venv
 $ venv/bin/pip install glances
-# Snipping pip output
+(Snipping pip output)
 $ whack deploy venv --in-place
-# Now we can copy the virtualenv to any other path,
-# and it will continue to work
+$ # Now we can copy the virtualenv to any other path,
+$ # and it will continue to work
 $ mv venv venv2
 $ venv2/bin/glances -v
 Glances version 1.7.1 with PsUtil 1.0.1
@@ -29,7 +29,7 @@ Compared to attempting to move the virtualenv without Whack:
 ```
 $ virtualenv venv
 $ venv/bin/pip install glances
-# Snipping pip output
+(Snipping pip output)
 $ mv venv venv2
 $ venv2/bin/glances -v
 bash: venv2/bin/glances: /tmp/venv/bin/python: bad interpreter: No such file or directory
