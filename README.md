@@ -37,7 +37,7 @@ bash: venv2/bin/glances: /tmp/venv/bin/python: bad interpreter: No such file or 
 
 ## Alternatives
 
-virtualenv itself supports a `--reloctable` argument.
+virtualenv itself supports a `--relocatable` argument.
 However, to quote from the package itself:
 
 > The --relocatable option currently has a number of issues, and is not guaranteed to work in all circumstances. It is possible that the option will be deprecated in a future version of virtualenv.
