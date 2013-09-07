@@ -6,6 +6,8 @@ Allows reloctable virtualenvs to be created using whack.
 Run `whack deploy ${env_path} --in-place` after installing additional scripts
 to create appropriate scripts under `${env_path}/bin`.
 
+This package is compatible with Whack 0.6 and 0.7.
+
 ## Example
 
 ```
